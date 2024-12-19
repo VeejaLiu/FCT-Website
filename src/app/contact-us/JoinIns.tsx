@@ -4,7 +4,7 @@ const JoinIns = () => {
   const address = 'https://www.instagram.com/weijialiuandrew/';
 
   return (
-    <a href={address} target={'_blank'}>
+    <a href={address} target={'_blank'} title={'Click to join us on Instagram'}>
       <button className={'join-ins-button'}>
         <svg
           // viewBox="0 0 16 16"

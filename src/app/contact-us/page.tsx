@@ -1,8 +1,8 @@
 // src/app/contact/page.tsx
-import JoinDiscord from '@/app/contact-us/JoinDiscord';
-import JoinGithub from '@/app/contact-us/JoinGithub';
-import JoinIns from '@/app/contact-us/JoinIns';
-import JoinTwitter from '@/app/contact-us/JoinTwitter';
+import JoinDiscord from "@/app/contact-us/JoinDiscord";
+import JoinGithub from "@/app/contact-us/JoinGithub";
+import JoinIns from "@/app/contact-us/JoinIns";
+import JoinTwitter from "@/app/contact-us/JoinTwitter";
 
 function ContactUsPage() {
   return (
@@ -25,7 +25,9 @@ function ContactUsPage() {
           <div className="card bg-white shadow-lg rounded-lg p-4">
             <h2 className="text-xl font-semibold">Email</h2>
             <p className="mt-2 text-gray-600">
-              <a href={'mailto:support@fccareer.top'}>support@fccareer.top</a>
+              <a href={"mailto:support@fccareer.top"} title="Click to email us">
+                support@fccareer.top
+              </a>
             </p>
           </div>
           <div className="card bg-white shadow-lg rounded-lg p-4">

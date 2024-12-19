@@ -40,6 +40,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <NavLink href="/change-logs">Changes</NavLink>
                 </li>
                 <li>
+                  <NavLink href="/posts">Posts</NavLink>
+                </li>
+                <li>
                   <NavLink href="/contact-us">Contact</NavLink>
                 </li>
               </div>
