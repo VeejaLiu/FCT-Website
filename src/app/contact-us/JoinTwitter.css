@@ -1,0 +1,58 @@
+/* From Uiverse.io by andrew-demchenk0 */
+.join-twitter-button {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px #00acee solid;
+    overflow: hidden;
+}
+
+.text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22%;
+}
+
+.text2 {
+    position: absolute;
+    top: 25%;
+    left: -80px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+}
+
+.icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background-color: #00acee;
+}
+
+.join-twitter-button:hover .icon {
+    transform: translateX(96px);
+    transition: transform 0.5s;
+}
+
+.join-twitter-button:hover .text2 {
+    transform: translateX(100px);
+    transition: transform 0.6s;
+}
+
+.join-twitter-button:active {
+    transform: scale(1.03);
+}
