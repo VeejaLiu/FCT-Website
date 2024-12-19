@@ -9,6 +9,9 @@ import Image from "next/image";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
+      <head>
+        <link rel="icon" href="/logo.svg" />
+      </head>
       <body>
         <div className="flex flex-col min-h-screen">
           <nav className="h-16 bg-[#151616] flex items-center">
@@ -17,7 +20,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link href="/">
                   <div className="text-white mr-1 text-xl font-bold cursor-pointer flex items-center">
                     <Image
-                      src="/logo.png"
+                      src="/logo.svg"
                       alt="Logo"
                       width={32}
                       height={32}
