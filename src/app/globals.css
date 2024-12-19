@@ -68,6 +68,29 @@ footer {
   background-color: #94f17a;
 }
 
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
 .col-content {
   margin: 20px;
   padding: 40px;

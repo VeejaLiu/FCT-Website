@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <body>
         <div className="flex flex-col min-h-screen">
-          <nav className="h-16 bg-[#151616] flex items-center">
+          <nav className="h-16 bg-[#151616] flex items-center fixed top-0 w-full z-10">
             <ul className="flex h-full items-center space-x-4 w-full">
               <li>
                 <Link href="/">
@@ -48,14 +48,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </div>
               <li className="mr-1 ml-auto">
                 <a href={"https://app.fccareer.top"} target={"_blank"}>
-                  <div className="go-to-app-button mr-4 h-16 flex items-center">
+                  <div className="go-to-app-button mr-4 h-16 flex items-center bounce-animation">
                     Go to App
                   </div>
                 </a>
               </li>
             </ul>
           </nav>
-          <main className="flex-grow p-4">{children}</main>
+          <main className="flex-grow p-4 mt-16">{children}</main>
           <footer className="bg-gray-800 text-white p-4 text-center">
             <Footer />
           </footer>
