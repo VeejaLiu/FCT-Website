@@ -94,14 +94,13 @@ export default function HomePage() {
               : 'flex-row-reverse bg-gradient-to-r from-green-500 to-teal-500'
           }`}
         >
-          <div className="relative mt-4 cursor-pointer">
+          <div className="relative mt-4">
             <Image
+              className="rounded-lg"
               src={image.src}
               alt={`Image ${index + 1}`}
               width={800}
               height={400}
-              style={{ borderRadius: '10px', border: '1px solid #333' }}
-              tabIndex={0} // Make the div focusable
             />
           </div>
           <div className={`w-1/2 p-4 text-white`}>
