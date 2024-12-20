@@ -1,8 +1,4 @@
 // src/app/contact/page.tsx
-import JoinDiscord from "@/app/contact-us/JoinDiscord";
-import JoinGithub from "@/app/contact-us/JoinGithub";
-import JoinIns from "@/app/contact-us/JoinIns";
-import JoinTwitter from "@/app/contact-us/JoinTwitter";
 
 function ContactUsPage() {
   return (
@@ -13,33 +9,41 @@ function ContactUsPage() {
           <div className="card bg-white shadow-lg rounded-lg p-4">
             <h2 className="text-xl font-semibold">Github</h2>
             <p className="mt-2 text-gray-600">
-              <JoinGithub />
-            </p>
-          </div>
-          <div className="card bg-white shadow-lg rounded-lg p-4">
-            <h2 className="text-xl font-semibold">Discord</h2>
-            <p className="mt-2 text-gray-600">
-              <JoinDiscord />
-            </p>
-          </div>
-          <div className="card bg-white shadow-lg rounded-lg p-4">
-            <h2 className="text-xl font-semibold">Email</h2>
-            <p className="mt-2 text-gray-600">
-              <a href={"mailto:support@fccareer.top"} title="Click to email us">
-                support@fccareer.top
+              {/* <JoinGithub /> */}
+              <a
+                href="https://github.com/VeejaLiu/FIFA-Career-Dashboard-Frontend"
+                title="Click to visit our Github"
+                target="_blank"
+              >
+                VeejaLiu/FIFA-Career-Dashboard-Frontend
               </a>
             </p>
           </div>
+
           <div className="card bg-white shadow-lg rounded-lg p-4">
-            <h2 className="text-xl font-semibold">Instagram</h2>
+            <h2 className="text-xl font-semibold">Discord</h2>
             <p className="mt-2 text-gray-600">
-              <JoinIns />
+              {/* <JoinDiscord /> */}
+              <a
+                href="https://discord.gg/aKfWAtbJ8F"
+                title="Click to join our Discord"
+                target="_blank"
+              >
+                https://discord.gg/aKfWAtbJ8F
+              </a>
             </p>
           </div>
+
           <div className="card bg-white shadow-lg rounded-lg p-4">
-            <h2 className="text-xl font-semibold">Twitter</h2>
-            <p className="mt-2 text-gray-600 ml-4">
-              <JoinTwitter />
+            <h2 className="text-xl font-semibold">Email</h2>
+            <p className="mt-2 text-gray-600">
+              <a
+                href="mailto:support@fccareer.top"
+                title="Click to email us"
+                target="_blank"
+              >
+                Mail: support@fccareer.top
+              </a>
             </p>
           </div>
         </div>
