@@ -88,13 +88,13 @@ export default function HomePage() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`flex items-center justify-between w-full mb-8 p-6 rounded-lg shadow-lg ${
+          className={`flex flex-col md:flex-row items-center justify-between w-full mb-8 p-6 rounded-lg shadow-lg ${
             index % 2 === 0
-              ? 'flex-row bg-gradient-to-r from-blue-500 to-purple-500'
-              : 'flex-row-reverse bg-gradient-to-r from-green-500 to-teal-500'
+              ? 'bg-gradient-to-r from-blue-500 to-purple-500'
+              : 'md:flex-row-reverse bg-gradient-to-r from-green-500 to-teal-500'
           }`}
         >
-          <div className="relative mt-4">
+          <div className="relative mt-4 md:mt-0">
             <Image
               className="rounded-lg"
               src={image.src}
@@ -103,7 +103,7 @@ export default function HomePage() {
               height={400}
             />
           </div>
-          <div className={`w-1/2 p-4 text-white`}>
+          <div className="w-full md:w-1/2 p-4 text-white">
             <h1 className="text-3xl font-bold title">{image.title}</h1>
             <p className="mt-2 text">{image.paragraph}</p>
           </div>
