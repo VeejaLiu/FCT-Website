@@ -98,7 +98,7 @@ export default function HomePage() {
             <Image
               className="rounded-lg"
               src={image.src}
-              alt={`Image ${index + 1}`}
+              alt={`Image of ${image.title}`}
               width={800}
               height={400}
             />
