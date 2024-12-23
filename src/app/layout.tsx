@@ -1,10 +1,10 @@
 // src/app/layout.tsx
-import "./globals.css";
-import "./fonts.css";
-import NavLink from "@/app/components/NavLink";
-import Link from "next/link";
-import Footer from "./components/Footer";
-import Image from "next/image";
+import './globals.css';
+import './fonts.css';
+import NavLink from '@/app/components/NavLink';
+import Link from 'next/link';
+import Footer from './components/Footer';
+import Image from 'next/image';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -47,7 +47,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </li>
               </div>
               <li className="mr-1 ml-auto">
-                <a href={"https://app.fccareer.top"} target={"_blank"}>
+                <a href={'https://app.fccareer.top'} target={'_blank'}>
                   <div className="go-to-app-button mr-4 h-16 flex items-center bounce-animation">
                     Go to App
                   </div>
