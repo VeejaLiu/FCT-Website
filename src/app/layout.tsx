@@ -45,6 +45,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li>
                   <NavLink href="/contact-us">Contact</NavLink>
                 </li>
+                <li>
+                  <NavLink href="/user-statistics">User Statistics</NavLink>
+                </li>
               </div>
               <li className="mr-1 ml-auto">
                 <a href={'https://app.fccareer.top'} target={'_blank'}>
