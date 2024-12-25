@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 
 const uniqueId = 'daily-new-users-count-chart';
+const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 function UserStatisticsPage() {
   const [data, setData] = useState<{ date: string; count: number }[]>([]);
@@ -20,9 +21,7 @@ function UserStatisticsPage() {
 
   useEffect(() => {
     axios
-      .get(
-        'http://localhost:8888/api/v1/public/daily-new-users-count?pastDays=90'
-      )
+      .get(`${apiUrl}/api/v1/public/daily-new-users-count?pastDays=90`)
       .then((response) => {
         const sortedData = response.data.sort(
           (a: any, b: any) => new Date(a.date) - new Date(b.date)
