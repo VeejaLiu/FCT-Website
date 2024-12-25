@@ -24,7 +24,8 @@ function UserStatisticsPage() {
       .get(`${apiUrl}/api/v1/public/daily-new-users-count?pastDays=90`)
       .then((response) => {
         const sortedData = response.data.sort(
-          (a: any, b: any) => new Date(a.date) - new Date(b.date)
+          (a: any, b: any) =>
+            new Date(a.date).getTime() - new Date(b.date).getTime()
         );
         const formattedData = sortedData.map((item: any) => {
           const date = new Date(item.date);
@@ -62,7 +63,7 @@ function UserStatisticsPage() {
   }
 
   function CustomLabel(props: any) {
-    const { x, y, width, height, value } = props;
+    const { x, y, width, value } = props;
     if (value === 0) {
       return null;
     }
