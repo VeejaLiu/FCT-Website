@@ -34,8 +34,8 @@ export function Change20240905() {
             recognition.
           </li>
           <li>
-            <strong>Position</strong>: Understand each player's role on the
-            field.
+            <strong>Position</strong>:
+            {`Understand each player's role on the field.`}
           </li>
           <li>
             <strong>Player ID</strong>: Unique identifiers for seamless
