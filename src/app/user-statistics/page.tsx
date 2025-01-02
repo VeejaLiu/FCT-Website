@@ -8,6 +8,7 @@ import {
   BarChart,
   ResponsiveContainer,
   XAxis,
+  YAxis, // Add YAxis import
   Cell,
   Tooltip,
 } from 'recharts';
@@ -18,6 +19,7 @@ const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 function UserStatisticsPage() {
   const [data, setData] = useState<{ date: string; count: number }[]>([]);
   const [loading, setLoading] = useState(true);
+  const [totalUserCount, setTotalUserCount] = useState(0);
 
   useEffect(() => {
     axios
@@ -41,6 +43,16 @@ function UserStatisticsPage() {
       .catch((error) => {
         console.error('Error fetching data:', error);
         setLoading(false);
+      });
+
+    axios
+      .get(`${apiUrl}/api/v1/public/users-count`)
+      .then((response) => {
+        console.log('Total user count:', response.data.count);
+        setTotalUserCount(response.data.count);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
       });
   }, []);
 
@@ -115,6 +127,12 @@ function UserStatisticsPage() {
                 axisLine={{ stroke: '#5dc1fb' }}
                 tick={{ fill: '#999' }}
               />
+              <YAxis
+                domain={[0, 'dataMax + 5']}
+                tickLine={false}
+                axisLine={false}
+              />
+              {/* Add YAxis with domain prop */}
               <Bar
                 dataKey="count"
                 fill="url(#abc-bar-gradient)"
@@ -131,6 +149,12 @@ function UserStatisticsPage() {
           </ResponsiveContainer>
         </div>
       )}
+
+      {/* Total registrations */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold">Total Registrations (all time)</h2>
+        <p className="text-3xl font-bold">{totalUserCount}</p>
+      </div>
     </div>
   );
 }
