@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Footer from './components/Footer';
 import Image from 'next/image';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { MenuIcon } from '@/constant/icons';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -33,7 +34,31 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </div>
                 </Link>
               </li>
-              <div className="flex items-center space-x-4 flex-grow">
+              {/* Dropdown */}
+              <div className="dropdown dropdown-bottom flex-grow md:hidden">
+                <div className="btn m-1">
+                  <MenuIcon className="w-6 h-6 text-white" />
+                </div>
+                <ul className="menu dropdown-content bg-base-100 rounded-box z-[100] w-52 p-2 shadow">
+                  <li>
+                    <NavLink href="/">Home</NavLink>
+                  </li>
+                  <li>
+                    <NavLink href="/change-logs">Changes</NavLink>
+                  </li>
+                  <li>
+                    <NavLink href="/posts">Posts</NavLink>
+                  </li>
+                  <li>
+                    <NavLink href="/contact-us">Contact</NavLink>
+                  </li>
+                  <li>
+                    <NavLink href="/user-statistics">User Statistics</NavLink>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="hidden items-center space-x-1 flex-grow md:flex">
                 <li>
                   <NavLink href="/">Home</NavLink>
                 </li>
@@ -50,13 +75,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <NavLink href="/user-statistics">User Statistics</NavLink>
                 </li>
               </div>
-              <li className="mr-1 ml-auto">
+              <div className="mr-1 ml-auto">
                 <a href={'https://app.fccareer.top'} target={'_blank'}>
-                  <div className="go-to-app-button mr-4 h-16 flex items-center bounce-animation">
+                  <div className="go-to-app-button flex items-center bounce-animation">
                     Go to App
                   </div>
                 </a>
-              </li>
+              </div>
             </ul>
           </nav>
           <main className="flex-grow p-4 mt-16">{children}</main>
