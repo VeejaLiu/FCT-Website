@@ -5,6 +5,7 @@ import NavLink from '@/app/components/NavLink';
 import Link from 'next/link';
 import Footer from './components/Footer';
 import Image from 'next/image';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -64,6 +65,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </footer>
         </div>
       </body>
+      <GoogleAnalytics gaId="G-2SNN4F98MN" />
     </html>
   );
 };
