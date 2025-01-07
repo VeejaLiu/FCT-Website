@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "buildAndStart": "npm run build && npm run start"
   },
   "engines": {
     "node": "22.12.0",

@@ -34,12 +34,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </div>
                 </Link>
               </li>
+
               {/* Dropdown */}
-              <div className="dropdown dropdown-bottom flex-grow md:hidden">
-                <div className="btn m-1">
-                  <MenuIcon className="w-6 h-6 text-white" />
+              <div className="dropdown flex-grow md:hidden">
+                <div
+                  tabIndex={0}
+                  className="btn bg-transparent border-0 p-0 m-0 text-inherit cursor-pointer focus:outline-none hover:bg-transparent"
+                  role="button"
+                >
+                  <MenuIcon className="w-6 h-6" />
                 </div>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-[100] w-52 p-2 shadow">
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content bg-[#151616] menu rounded-box z-[100] w-52 p-2 shadow"
+                >
                   <li>
                     <NavLink href="/">Home</NavLink>
                   </li>
